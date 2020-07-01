@@ -1,26 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="#.css" />
-
-
     <title>Title</title>
-
 </head>
 
 <body>
 
-    
-    <!-- JQuery -->
+    <header>
+       <h1> B-Card Maker </h1>
+    </header>
+
+    <section class="section">
+
+        <div class="columns">
+            <div class="left-column column is-centered">
+                Enter Name:
+            </div>
+            <div class="right-column column is-centered">
+                <input id="name" placeholder="Name">
+            </div>
+            
+        </div>
+
+        <div class="columns">
+            <div class="left-column column is-centered">
+                Select Month:
+                <br>
+                Select Day:
+                <br>
+                Select Year:
+            </div>
+
+            <div class="right-column column is-centered">
+                <select id="months" name="">
+                    <option value="0">January</option>
+                    <option value="1">February</option>
+                    <option value="2">March</option>
+                    <option value="3">April</option>
+                    <option value="4">May</option>
+                    <option value="5">June</option>
+                    <option value="6">July</option>
+                    <option value="7">August</option>
+                    <option value="8">September</option>
+                    <option value="9">October</option>
+                    <option value="10">November</option>
+                    <option value="11">December</option>
+                </select>
+                <br>
+                <select id="days" name=""></select>
+                <br>
+                <input id="year" placeholder="YYYY">
+            </div>
+            
+            
+        </div>
+
+        
+
+
+        <div class="columns">
+            <div class="center-column column is-centered">
+                <select id="card-styles" name="Card Options">
+                    <option disabled selected>Choose a card style</option>
+                    <option value="">Top Song</option>
+                    <option value="">Top Movie</option>
+                    <option value="">Top Book</option>
+                    <option> space themed </option>
+                    <option value="">News Headline</option>
+                </select>
+
+                <br>
+                <br>
+
+                <button class="button is-primary" id="submitBtn">Generate B-Card!</button>
+            </div>
+            
+        </div>
+
+    </section>
+
+    <style>
+
+        body {
+            background-image: url("background.jpg");
+            font-family: 'Poppins', sans-serif;
+            color: white;
+        }
+
+        section {
+            max-width: 500px;
+            margin: auto;  
+            background-color: black;         
+        }
+
+        h1 {
+            text-align: center;
+            background-color: aqua;
+            font-weight: bolder;
+            color: black;
+            border-bottom: solid 1px black;
+            font-size: x-large;
+        }
+
+        .button.is-primary {
+            color: black;
+            font-weight: bold;
+        }
+
+        .left-column {
+            text-align: right;
+        }
+
+        .center-column {
+            text-align: center;
+        }
+
+
+   
+
+
+    </style>
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
+    <script>
+        for (var i=0; i<31; i++) {
+            var dayOption = $("<option>");
+            dayOption.text(i+1);
+            $("#days").append(dayOption);
+        }
+    </script>
+    
     <script src="#.js"></script>
 
 </body>
+</html>
