@@ -13,3 +13,4 @@ $(document).ready(function(){
     }
     headlines();  
 })
+var nasaQueryURL = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=2019-02-18"
