@@ -6,6 +6,9 @@
         <title>Birthday Card Generator</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,200&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=K2D:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nixie+One&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -26,7 +29,7 @@
                                     <div class="content">
                                         <h1>Enter Name:</h1>
                                         <div>
-                                            <input id="name" class="input is-danger" type="text" placeholder="Name">
+                                            <input id="input-name" class="input is-danger" type="text" placeholder="Name">
                                         </div>
                                     </div>
                                 </div>
@@ -46,19 +49,19 @@
                                 <div class="column is-2 is-offset-one-quarter">
                                     <div class="select is-info" style="width: 100%">
                                         <div class="content" >
-                                            <select id="months" style="width: 100%">
-                                                <option value="0">January</option>
-                                                <option value="1">February</option>
-                                                <option value="2">March</option>
-                                                <option value="3">April</option>
-                                                <option value="4">May</option>
-                                                <option value="5">June</option>
-                                                <option value="6">July</option>
-                                                <option value="7">August</option>
-                                                <option value="8">September</option>
-                                                <option value="9">October</option>
-                                                <option value="10">November</option>
-                                                <option value="11">December</option>
+                                            <select id="input-month" style="width: 100%">
+                                                <option value="January">January</option>
+                                                <option value="February">February</option>
+                                                <option value="March">March</option>
+                                                <option value="April">April</option>
+                                                <option value="May">May</option>
+                                                <option value="June">June</option>
+                                                <option value="July">July</option>
+                                                <option value="August">August</option>
+                                                <option value="September">September</option>
+                                                <option value="October">October</option>
+                                                <option value="November">November</option>
+                                                <option value="December">December</option>
                                             </select>
                                         </div>
                                     </div>
@@ -66,13 +69,13 @@
                                 <div class="column is-2">
                                     <div class="content">
                                         <div class="select is-info" style="width: 100%">
-                                            <select id="days" style="width: 100%"></select>
+                                            <select id="input-day" style="width: 100%"></select>
                                         </div> 
                                     </div>
                                 </div>
                                 <div class="column is-2">
                                     <div class="content">
-                                        <input class="forms input is-info" type="text" placeholder="YYYY">
+                                        <input class="forms input is-info" id="input-year" type="text" placeholder="YYYY">
                                     </div>
                                 </div>
                             </div>
@@ -89,10 +92,10 @@
                                         <div class="select is-warning" style="width: 100%">
                                             <select id="card-styles" name="Card Options" style="width: 100%">
                                                 <option disabled selected>Choose a card style</option>
-                                                <option value="">Movie</option>
-                                                <option value="">Book</option>
-                                                <option>Nasa Image</option>
-                                                <option value="">News Headline</option>
+                                                <!-- <option value="">Movie</option> -->
+                                                <option value="book">Book</option>
+                                                <option value="space">Nasa Image</option>
+                                                <option value="paper">News Headline</option>
                                             </select>
                                         </div>
                                     </div>
@@ -114,10 +117,58 @@
                 </div>
             </section>
         </main>
+        <section class="section bday-card hide">
+            <div class="container bcard">
+                <div class="columns">
+                    <div class="column">
+                        <div class="card card-column">
+                            <div id='card-background'>
+                                <div class="card-content">
+                                    <div class="content card-title-area center"></div>                            
+                                </div>
+                                <div class="card-background">
+                                    <div class="columns card-insides">
+                                        <div class="column left-column">
+                                            <div class="card-content center">
+                                                <div class="content card-text-area"></div>
+                                            </div>                            
+                                        </div>
+                                        <div class="column right-column">
+                                            <div class="card-image">
+                                                <figure class="image">
+                                                    <img src="https://bulma.io/images/placeholders/128x128.png">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class ="section send-button hide">
+            <div class="container">
+                <div class="columns">
+                    <div class="column is-half is-offset-one-quarter">
+                        <div class="content">
+                            <button class="button is-primary" id="sendBtn" style="width: 100%">Send Your Card!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style>
+
+
+
+        </style>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="style-script.js"></script>
     </body>
 
-</html>
+</html> 
 
-
+<!-- height for our images should be 500px-->
