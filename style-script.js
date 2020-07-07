@@ -4,7 +4,13 @@ $( document ).ready(function() {
     for (var i=0; i<31; i++) {
         var dayOption = $("<option>");
         dayOption.text(i+1);
-        dayOption.val(i+1);
+        if (i<10) {
+            dayOption.val("0"+(i+1));
+        }
+        else {
+            dayOption.val(i+1);
+        }
+        
         $("#input-day").append(dayOption);
     }
 
