@@ -123,6 +123,8 @@ p {
 
 .card-image {
     padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .content h3 {
@@ -137,6 +139,25 @@ p {
 .content h4 {
     font-size: 32px;
     color: #3e3e3e;
+}
+
+.image img {
+    display: block;
+    height: auto;
+    width: auto;
+    max-height: 440px;
+}
+
+.headline-area {
+    font-family: 'Averia Serif Libre', sans-serif;;
+    background-color: #b7b7b7;
+    padding: 1.25em;
+    color: #ab4b4b;
+    border-radius: 1rem;
+}
+
+.paper-headlines {
+    font-size: 40px;
 }
 
 #space {
@@ -160,16 +181,28 @@ p {
     border-color: #7e7e7e;
 }
 
+#movie {
+    background-image: url('images/movie-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-color: #f58052;
+}
+
 .space-font {
     font-family: 'K2D', sans-serif;
 }
 
 .paper-font {
-    font-family: 'Averia Serif Libre', cursive;
+    font-family: 'Averia Serif Libre', sans-serif;
 }
 
 .book-font {
-    font-family: 'Nixie One', cursive;
+    font-family: 'Nixie One', sans-serif;
+}
+
+.movie-font {
+    font-family: 'Abril Fatface', serif;
+    letter-spacing: .1em;
 }
 
 .hide {
@@ -185,5 +218,16 @@ p {
     .content h4 {
         font-size: 18px;
     }
+
+    .card-image {
+        justify-content: center;
+    }
+
+    .image img {
+        max-height: 175px;
+        width: auto;
+    }
 }
+
+
     
