@@ -23,7 +23,3 @@ $(document).ready(function(){
     }
     books();  
 })
-var nasaQueryURL = "https://api.nasa.gov/planetary/apod?api_key=PxXYhbxjF4qoZihVRPPnN3C4IpvxKF4N1eWiJVRx&date=" +
-"2019-" +
-    inputMonth + "-" +
-    inputDay +
