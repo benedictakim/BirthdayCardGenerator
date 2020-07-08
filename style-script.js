@@ -60,6 +60,17 @@ $( document ).ready(function() {
                     
             console.log(inputMonth + inputDay + inputYear);
             
+            var nasaQueryURL = "https://api.nasa.gov/planetary/apod?api_key=PxXYhbxjF4qoZihVRPPnN3C4IpvxKF4N1eWiJVRx&date=" +
+                "2019-" +
+                inputMonth + "-" +
+                inputDay;
+            $.ajax({
+                method:"GET",  
+                url: nasaQueryURL,
+            }).then(function(response){
+                console.log(response);
+                console.log (response.hdurl);
+            })
             makeCard();
             
 
