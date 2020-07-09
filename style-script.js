@@ -224,4 +224,20 @@ $( document ).ready(function() {
             getMovieImage();
         }
     }
+
+    //Opens a print dialogue to print the card
+    function printCard() {
+        var restorepage = document.body.innerHTML;
+        var printcontent = document.getElementById("printCard").innerHTML;
+        document.body.innerHTML = printcontent;
+        window.print();
+        document.body.innerHTML = restorepage;
+
+    }
+
+    //runs print function when print button is clicked
+    $("#sendBtn").on("click", function() {
+        printCard();
+    });
+
 });
