@@ -20,4 +20,4 @@ After they click the 'generate bcard!' button, they are given an electronic birt
   
 The user then is able to click 'print' and can print the card to give to the recipient in person. 
 
-You can preview the application here: https://tmylesc.github.io/bcard/index.html
+You can preview the application here: https://benedictakim.github.io/BirthdayCardGenerator/ 
